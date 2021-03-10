@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Express服务器的搭建 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Express是基于Node.js平台，快速、开放极简的web开发框架 初始化 1npm init -y  &#x2F;&#x2F;加-y时 会以默认参数创建package.json文件   若不加 可以自定义package.json参数信息 安装 1npm install express -save 自动重启服务器工具 1npm install nodemon  &#x2F;&#x2F;若要使用该工具  在启动服务器时要使用nodem">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Express服务器的搭建">
+<meta property="og:url" content="http://example.com/2020/10/08/Express%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%90%AD%E5%BB%BA/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Express是基于Node.js平台，快速、开放极简的web开发框架 初始化 1npm init -y  &#x2F;&#x2F;加-y时 会以默认参数创建package.json文件   若不加 可以自定义package.json参数信息 安装 1npm install express -save 自动重启服务器工具 1npm install nodemon  &#x2F;&#x2F;若要使用该工具  在启动服务器时要使用nodem">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-10-08T06:05:44.000Z">
+<meta property="article:modified_time" content="2021-03-09T06:23:20.414Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Express服务器的搭建" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/10/08/Express%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%90%AD%E5%BB%BA/" class="article-date">
+  <time class="dt-published" datetime="2020-10-08T06:05:44.000Z" itemprop="datePublished">2020-10-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Express服务器的搭建
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Express"><a href="#Express" class="headerlink" title="Express"></a>Express</h1><p>是基于Node.js平台，快速、开放极简的web开发框架</p>
+<p>初始化</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init -y  <span class="comment">//加-y时 会以默认参数创建package.json文件   若不加 可以自定义package.json参数信息</span></span><br></pre></td></tr></table></figure>
+<p>安装</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install express -save</span><br></pre></td></tr></table></figure>
+<p>自动重启服务器工具</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install nodemon  <span class="comment">//若要使用该工具  在启动服务器时要使用nodemon命令 如 nodemon ./server.js</span></span><br></pre></td></tr></table></figure>
+<p>路径的匹配</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//匹配student开头，而且后面跟了学号   http://localhost:8000/student/1234</span></span><br><span class="line">app.get(<span class="string">&quot;/student/:id/:name&quot;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> id = req.params[<span class="string">&quot;id&quot;</span>];</span><br><span class="line">    <span class="keyword">var</span> name = req.params[<span class="string">&quot;name&quot;</span>];</span><br><span class="line">    res.send(id+name);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="中间件的另一种使用方式"><a href="#中间件的另一种使用方式" class="headerlink" title="中间件的另一种使用方式"></a>中间件的另一种使用方式</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> app = express();</span><br><span class="line"><span class="keyword">var</span> f1 = <span class="function">(<span class="params">req,res,next</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">1</span>);</span><br><span class="line">    next();</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> f2 = <span class="function">(<span class="params">req,res,next</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">2</span>);</span><br><span class="line">    next();</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> f3 = <span class="function">(<span class="params">req,res,next</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">3</span>);</span><br><span class="line">    res.send();</span><br><span class="line">&#125;</span><br><span class="line">app.use(<span class="string">&#x27;/user&#x27;</span>,[f1,f2,f3]);</span><br><span class="line">app.listen(<span class="number">3000</span>,<span class="function">()=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;running...&#x27;</span>);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="next注意点"><a href="#next注意点" class="headerlink" title="next注意点"></a>next注意点</h2><p>有如下代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> app = express();</span><br><span class="line"><span class="comment">//无门槛进入  只要是localhost:3000就会响应</span></span><br><span class="line">app.use(<span class="function">(<span class="params">req,res,next</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;有用户进入...函数一&#x27;</span>);</span><br><span class="line">    next(); <span class="comment">//通关文牒</span></span><br><span class="line">&#125;,<span class="function">(<span class="params">req,res,next</span>)=&gt;</span>&#123;  </span><br><span class="line">       <span class="built_in">console</span>.log(<span class="string">&#x27;有用户进入...函数二&#x27;</span>);</span><br><span class="line">    next();</span><br><span class="line">&#125;);</span><br><span class="line">app.use(<span class="string">&#x27;/user&#x27;</span>,<span class="function">(<span class="params">req,res,next</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;访问结束&#x27;</span>);</span><br><span class="line">    res.send(<span class="string">&#x27;用户页面&#x27;</span>+total);</span><br><span class="line">&#125;);</span><br><span class="line">app.listen(<span class="number">3000</span>,<span class="function">()=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;running...&#x27;</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p><strong>next() 不加参数时会指向下一个执行函数，即函数一中的next()会指向函数二</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> app = express();</span><br><span class="line"><span class="comment">//无门槛进入  只要是localhost:3000就会响应</span></span><br><span class="line">app.use(<span class="function">(<span class="params">req,res,next</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;有用户进入...函数一&#x27;</span>);</span><br><span class="line">    next(<span class="string">&#x27;/user&#x27;</span>); <span class="comment">//通关文牒</span></span><br><span class="line">&#125;,<span class="function">(<span class="params">req,res,next</span>)=&gt;</span>&#123;  </span><br><span class="line">       <span class="built_in">console</span>.log(<span class="string">&#x27;有用户进入...函数二&#x27;</span>);</span><br><span class="line">    next();</span><br><span class="line">&#125;);</span><br><span class="line">app.use(<span class="string">&#x27;/user&#x27;</span>,<span class="function">(<span class="params">req,res,next</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;访问结束&#x27;</span>);</span><br><span class="line">    res.send(<span class="string">&#x27;用户页面&#x27;</span>+total);</span><br><span class="line">&#125;);</span><br><span class="line">app.listen(<span class="number">3000</span>,<span class="function">()=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;running...&#x27;</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p><strong>next(‘/user’) 加参数时，会跳转至下一个路径为/user的use函数，即跳过函数二直接来到下一个use函数。</strong></p>
+<h2 id="body-parser的使用"><a href="#body-parser的使用" class="headerlink" title="body-parser的使用"></a>body-parser的使用</h2><p><strong>作用：可以获取post请求中信息</strong></p>
+<p>安装</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install body-parser --save</span><br></pre></td></tr></table></figure>
+
+<p>使用</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> app = express();</span><br><span class="line"><span class="keyword">const</span> bodyParser = <span class="built_in">require</span>(<span class="string">&#x27;body-parser&#x27;</span>);</span><br><span class="line"><span class="comment">//若要获取post中的参数 则必须以此挂载bodyparser中间件</span></span><br><span class="line">app.use(bodyParser.urlencoded(&#123;<span class="attr">extended</span>: <span class="literal">false</span>&#125;));</span><br><span class="line">app.use(express.static(<span class="string">&#x27;views&#x27;</span>));</span><br><span class="line">app.post(<span class="string">&#x27;/login&#x27;</span>,<span class="function">(<span class="params">req,res</span>)=&gt;</span>&#123;</span><br><span class="line">    res.send(<span class="string">&#x27;name:&#x27;</span>+req.body.username);</span><br><span class="line">&#125;);</span><br><span class="line">app.listen(<span class="number">3000</span>,<span class="function">()=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;running...&#x27;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="错误处理中间件"><a href="#错误处理中间件" class="headerlink" title="错误处理中间件"></a>错误处理中间件</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> app = express();</span><br><span class="line">app.get(<span class="string">&#x27;/index&#x27;</span>,<span class="function">(<span class="params">req,res,next</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">try</span>&#123;</span><br><span class="line">        <span class="keyword">let</span> a = <span class="literal">null</span>;</span><br><span class="line">        <span class="built_in">console</span>.log(a.toString()); <span class="comment">//null不能调用toString()  此处故意制造错误</span></span><br><span class="line">        next();</span><br><span class="line">    &#125;<span class="keyword">catch</span>(e)&#123;</span><br><span class="line">        next(e); <span class="comment">//转至错误处理中间件</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//错误处理中间件（注意。错误处理中间件 要用use）</span></span><br><span class="line">app.use(<span class="function">(<span class="params">err,req,res,next</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="comment">// res.send(err); 无法打印</span></span><br><span class="line">    res.send(err.toString());</span><br><span class="line">&#125;);</span><br><span class="line">app.listen(<span class="number">3000</span>,<span class="function">()=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;running...&#x27;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="指定静态资源"><a href="#指定静态资源" class="headerlink" title="指定静态资源"></a>指定静态资源</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> app = express();</span><br><span class="line">app.use(express.static(<span class="string">&#x27;views&#x27;</span>));<span class="comment">//指定views文件夹为静态资源文件夹  若该文件夹中存在login.html 则可以通过http:localhost:3000/login.html来直接访问该页面</span></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="Router类的使用"><a href="#Router类的使用" class="headerlink" title="Router类的使用"></a>Router类的使用</h2><p>1、先创建一个需要js文件，每一个js文件就是一个类</p>
+<p>每一个js文件中的写法</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> router = express.Router(); <span class="comment">//创建router类</span></span><br><span class="line">router.get(<span class="string">&#x27;/c1&#x27;</span>,<span class="function">(<span class="params">req,res</span>)=&gt;</span>&#123;  <span class="comment">//设置请求响应函数  /c1为访问路径</span></span><br><span class="line">    res.send(<span class="string">&#x27;/c1&#x27;</span>);</span><br><span class="line">&#125;);</span><br><span class="line">router.post(<span class="string">&#x27;/c2&#x27;</span>,<span class="function">(<span class="params">req,res</span>)=&gt;</span>&#123;<span class="comment">//设置请求响应函数</span></span><br><span class="line">    res.send(<span class="string">&#x27;/c2&#x27;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">module</span>.exports = router;  <span class="comment">//将router暴露出去</span></span><br></pre></td></tr></table></figure>
+<p>2、当创建若干js文件（类）之后，用一个js文件进行汇总使用，相当于入口文件 此处创建server.js</p>
+<p>写法</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> app = express();</span><br><span class="line"><span class="keyword">const</span> chang = <span class="built_in">require</span>(<span class="string">&#x27;./chang&#x27;</span>); <span class="comment">//引入自定义的类</span></span><br><span class="line"><span class="comment">//...</span></span><br><span class="line">app.use(<span class="string">&#x27;/chang&#x27;</span>,chang);  <span class="comment">//访问方式 localhost:3000/chang/c1     //此处用use指定的/chang只是虚拟路径 并不存在真实的物理路径</span></span><br><span class="line"><span class="comment">//app.use(chang);   //访问方式 localhost:3000/c1 </span></span><br><span class="line"><span class="comment">//...</span></span><br><span class="line"><span class="comment">//app.use(.....)</span></span><br><span class="line">app.listen(<span class="number">3000</span>,<span class="function">()=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;running...&#x27;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>这种使用方式相当于自定义了中间件后，再在server中使用。</p>
+<h2 id="art-template的使用"><a href="#art-template的使用" class="headerlink" title="art-template的使用"></a>art-template的使用</h2><h3 id="art-template在前台的使用"><a href="#art-template在前台的使用" class="headerlink" title="art-template在前台的使用"></a>art-template在前台的使用</h3><p>下载<a target="_blank" rel="noopener" href="http://aui.github.io/art-template/docs/installation.html">art-template-web</a></p>
+<p>1、将art-template-web.js引入到页面</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">&quot;./template-web.js&quot;</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>2、在页面中定义一个模板</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;/body&gt;</span><br><span class="line"><span class="comment">//此script标签相当于一个容器</span></span><br><span class="line">&lt;script id=<span class="string">&quot;test&quot;</span> type=<span class="string">&quot;text/html&quot;</span>&gt; <span class="comment">//注意 此处一定要加上  type=&quot;text/html&quot;</span></span><br><span class="line">    &#123;&#123;each users&#125;&#125;</span><br><span class="line">        &lt;h1&gt;&#123;&#123;$value.name&#125;&#125;&lt;/h1&gt;</span><br><span class="line">        &lt;li&gt;&#123;&#123;$value.age&#125;&#125;&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;&#123;&#123;$value.gender&#125;&#125;&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;&#123;&#123;$value.love&#125;&#125;&lt;/li&gt;</span><br><span class="line">    &#123;&#123;/each&#125;&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="keyword">var</span> data = &#123;</span><br><span class="line">        users:[&#123;<span class="attr">name</span>: <span class="string">&#x27;张三&#x27;</span>, <span class="attr">age</span>: <span class="number">12</span>, <span class="attr">gender</span>: <span class="string">&#x27;女&#x27;</span>, <span class="attr">love</span>: <span class="string">&#x27;唱&#x27;</span>&#125;,</span><br><span class="line">               &#123;<span class="attr">name</span>: <span class="string">&#x27;李四&#x27;</span>, <span class="attr">age</span>: <span class="number">13</span>, <span class="attr">gender</span>: <span class="string">&#x27;男&#x27;</span>, <span class="attr">love</span>: <span class="string">&#x27;跳&#x27;</span>&#125;,</span><br><span class="line">               &#123;<span class="attr">name</span>: <span class="string">&#x27;王五&#x27;</span>, <span class="attr">age</span>: <span class="number">14</span>, <span class="attr">gender</span>: <span class="string">&#x27;女&#x27;</span>, <span class="attr">love</span>: <span class="string">&#x27;rap&#x27;</span>&#125;,</span><br><span class="line">               &#123;<span class="attr">name</span>: <span class="string">&#x27;蔡徐坤&#x27;</span>, <span class="attr">age</span>: <span class="number">15</span>, <span class="attr">gender</span>: <span class="string">&#x27;女&#x27;</span>, <span class="attr">love</span>: <span class="string">&#x27;篮球&#x27;</span>&#125;]</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//如果数组中都是对象，且要访问对象内的值时要使用$value.xxx  value代表当前遍历到的数组元素</span></span><br><span class="line">    <span class="keyword">var</span> html = template(<span class="string">&#x27;test&#x27;</span>,data);</span><br><span class="line">    <span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;box&#x27;</span>);</span><br><span class="line">    box.innerHTML = html;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p>另一种实现方式</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="comment">//当使用此法时 模板字符串拼接时  每一个标签要单独用 &quot;&quot; 括起来</span></span><br><span class="line">    <span class="keyword">var</span> artt = <span class="string">&quot;&#123;&#123;each users&#125;&#125;&quot;</span>+</span><br><span class="line">        <span class="string">&quot;&lt;h1&gt;&#123;&#123;$value.name&#125;&#125;&lt;/h1&gt;&quot;</span>+</span><br><span class="line">        <span class="string">&quot;&lt;li&gt;&#123;&#123;$value.age&#125;&#125;&lt;/li&gt;&quot;</span>+</span><br><span class="line">        <span class="string">&quot;&lt;li&gt;&#123;&#123;$value.gender&#125;&#125;&lt;/li&gt;&quot;</span>+</span><br><span class="line">        <span class="string">&quot;&lt;li&gt;&#123;&#123;$value.love&#125;&#125;&lt;/li&gt;&quot;</span>+</span><br><span class="line">    <span class="string">&quot;&#123;&#123;/each&#125;&#125;&quot;</span>;</span><br><span class="line">    <span class="keyword">var</span> render = template.compile(artt);</span><br><span class="line">    <span class="keyword">var</span> data = &#123;</span><br><span class="line">        users:[&#123;<span class="attr">name</span>: <span class="string">&#x27;张三&#x27;</span>, <span class="attr">age</span>: <span class="number">12</span>, <span class="attr">gender</span>: <span class="string">&#x27;女&#x27;</span>, <span class="attr">love</span>: <span class="string">&#x27;唱&#x27;</span>&#125;,</span><br><span class="line">                &#123;<span class="attr">name</span>: <span class="string">&#x27;李四&#x27;</span>, <span class="attr">age</span>: <span class="number">13</span>, <span class="attr">gender</span>: <span class="string">&#x27;男&#x27;</span>, <span class="attr">love</span>: <span class="string">&#x27;跳&#x27;</span>&#125;,</span><br><span class="line">                &#123;<span class="attr">name</span>: <span class="string">&#x27;王五&#x27;</span>, <span class="attr">age</span>: <span class="number">14</span>, <span class="attr">gender</span>: <span class="string">&#x27;女&#x27;</span>, <span class="attr">love</span>: <span class="string">&#x27;rap&#x27;</span>&#125;,</span><br><span class="line">                &#123;<span class="attr">name</span>: <span class="string">&#x27;蔡徐坤&#x27;</span>, <span class="attr">age</span>: <span class="number">15</span>, <span class="attr">gender</span>: <span class="string">&#x27;女&#x27;</span>, <span class="attr">love</span>: <span class="string">&#x27;篮球&#x27;</span>&#125;]</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//如果数组中都是对象，且要访问对象内的值时要使用$value.xxx  value代表当前遍历到的数组元素</span></span><br><span class="line">    <span class="keyword">var</span> html = render(data);</span><br><span class="line">    <span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;box&#x27;</span>);</span><br><span class="line">    box.innerHTML = html;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="art-template在后台中的使用"><a href="#art-template在后台中的使用" class="headerlink" title="art-template在后台中的使用"></a>art-template在后台中的使用</h3><p>初始化</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init -y</span><br></pre></td></tr></table></figure>
+
+<p>安装</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install art-template --save</span><br><span class="line">npm install express-art-template --save</span><br></pre></td></tr></table></figure>
+<p>使用</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> app = express();</span><br><span class="line"><span class="comment">//指定art-template渲染的文件后缀是html</span></span><br><span class="line">app.engine(<span class="string">&#x27;html&#x27;</span>,<span class="built_in">require</span>(<span class="string">&#x27;express-art-template&#x27;</span>));</span><br><span class="line"><span class="comment">//指定静态资源目录</span></span><br><span class="line">app.use(express.static(<span class="string">&#x27;views&#x27;</span>));</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/10/08/Express%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%90%AD%E5%BB%BA/" data-id="ckm3be1pk0001c0ut1oli6v34" data-title="Express服务器的搭建" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/10/13/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E4%B8%8E%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86DOM-%E9%80%92%E5%BD%92%E4%B8%8E%E9%9D%9E%E9%80%92%E5%BD%92/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          深度优先与广度优先遍历DOM(递归与非递归)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/08/08/ES6%E6%96%B0%E7%89%B9%E6%80%A7/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">ES6新特性</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/03/10/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/20/%E6%B5%85%E8%B0%88%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96/">浅谈前端模块化</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/18/%E6%B5%85%E8%B0%88TypeScript/">浅谈TypeScript</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/04/Vuex%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3/">Vuex使用详解</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/20/MySql/">MySql</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
