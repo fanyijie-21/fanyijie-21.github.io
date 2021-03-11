@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>FanYijie</title>
-  <icon>https://www.gravatar.com/avatar/b003821be0d252cc0e54f67017e3a383</icon>
-  <subtitle>一个小白的个人博客</subtitle>
+  
+  
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
@@ -11,7 +11,7 @@
   
   <author>
     <name>FanYijie</name>
-    <email>943804182@qq.com</email>
+    
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
