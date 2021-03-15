@@ -1,0 +1,209 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>hexo主题美化 | FanYijie</title><meta name="keywords" content="hexo,git"><meta name="author" content="FanYijie"><meta name="copyright" content="FanYijie"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="上期我们使用hexo和git进行了个人博客的基础搭建，搭建好的博客虽然已具备基本的使用功能但在页面美化和功能上还是有很多的不足，今天我给大家分享一下hexo博客的主题美化。     一.更换主题  为了让它看起来更美观一些，我们可以为其更换主题（当然也可以自己在默认主  题下自己编写美化博客界面）。这里以使用github上的next主题为例：   1.创建next文件夹  切换到本地博客根目录下，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo主题美化">
+<meta property="og:url" content="http://example.com/2019/05/20/hexo%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/index.html">
+<meta property="og:site_name" content="FanYijie">
+<meta property="og:description" content="上期我们使用hexo和git进行了个人博客的基础搭建，搭建好的博客虽然已具备基本的使用功能但在页面美化和功能上还是有很多的不足，今天我给大家分享一下hexo博客的主题美化。     一.更换主题  为了让它看起来更美观一些，我们可以为其更换主题（当然也可以自己在默认主  题下自己编写美化博客界面）。这里以使用github上的next主题为例：   1.创建next文件夹  切换到本地博客根目录下，">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://w.wallhaven.cc/full/q6/wallhaven-q6jvjl.jpg">
+<meta property="article:published_time" content="2019-05-20T10:00:45.000Z">
+<meta property="article:modified_time" content="2021-03-15T13:12:00.581Z">
+<meta property="article:author" content="FanYijie">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="git">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://w.wallhaven.cc/full/q6/wallhaven-q6jvjl.jpg"><link rel="shortcut icon" href="/img/weblogo.png"><link rel="canonical" href="http://example.com/2019/05/20/hexo%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: true,
+  postUpdate: '2021-03-15 21:12:00'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="FanYijie" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/txone.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">26</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://w.wallhaven.cc/full/q6/wallhaven-q6jvjl.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">FanYijie</a></span><span id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><h1 class="post-title">hexo主题美化</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2019-05-20T10:00:45.000Z" title="发表于 2019-05-20 18:00:45">2019-05-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-03-15T13:12:00.581Z" title="更新于 2021-03-15 21:12:00">2021-03-15</time></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>上期我们使用hexo和git进行了个人博客的基础搭建，搭建好的博客虽然已具备基本的使用功能但在页面美化和功能上还是有很多的不足，今天我给大家分享一下hexo博客的主题美化。</p>
+<br>
+
+<br>
+
+<h2 id="一-更换主题"><a href="#一-更换主题" class="headerlink" title="一.更换主题"></a>一.更换主题</h2><br>
+
+<p>为了让它看起来更美观一些，我们可以为其更换主题（当然也可以自己在默认主</p>
+<p> 题下自己编写美化博客界面）。这里以使用github上的next主题为例：</p>
+<br>
+
+<h3 id="1-创建next文件夹"><a href="#1-创建next文件夹" class="headerlink" title="1.创建next文件夹"></a>1.创建next文件夹</h3><br>
+
+<p>切换到本地博客根目录下，在主题文件thems下创建一个新文件夹next存放即将下载的next主题(git bash)</p>
+<br>
+
+<h3 id="2-下载主题"><a href="#2-下载主题" class="headerlink" title="2.下载主题"></a>2.下载主题</h3><br>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;iissnan&#x2F;hexo-theme-next themes&#x2F;next        &#x2F;&#x2F;下载主题</span><br></pre></td></tr></table></figure>
+
+<p>下载成之后我们会看到next的主题已经存在thems里了如下：</p>
+<p><img src="https://p.130014.xyz/2021/03/10/121b0ff45f2a25754.png"></p>
+<br>
+
+<h3 id="3-修改博客配置文件，更换主题配置"><a href="#3-修改博客配置文件，更换主题配置" class="headerlink" title="3.修改博客配置文件，更换主题配置"></a>3.修改博客配置文件，更换主题配置</h3><br>
+
+<p>修改博客根目录(不是next主题)下的_config.yml文件，搜索theme字段，并将其值修改为next</p>
+<p><img src="https://p.130014.xyz/2021/03/10/186165491ac1c3a1a.png"></p>
+<br>
+
+<p>然后在控制台（git bash）下输入如下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean   &#x2F;&#x2F;清理缓存</span><br><span class="line">hexo g       &#x2F;&#x2F;重新生成博客代码 </span><br><span class="line">hexo d       &#x2F;&#x2F;部署到本地</span><br></pre></td></tr></table></figure>
+
+<p>再次打开我们的博客网站<a target="_blank" rel="noopener" href="https://dreamcoffeezs.github.io/">https://UserName.github.io</a>，将会看到更换主题后</p>
+<p><img src="https://p.130014.xyz/2021/03/10/16a5f77e04e2550ef.png"></p>
+<p><a target="_blank" rel="noopener" href="https://hexo.io/themes/">更多主题美化</a></p>
+<br>
+
+<br>
+
+<h2 id="二-Live2D看板娘"><a href="#二-Live2D看板娘" class="headerlink" title="二.Live2D看板娘"></a>二.Live2D看板娘</h2><br>
+
+<h3 id="1-安装依赖"><a href="#1-安装依赖" class="headerlink" title="1.安装依赖"></a>1.安装依赖</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
+
+<p>安装过程中可能遇到一些依赖性问题，按提示做就行</p>
+<p><img src="https://img-blog.csdnimg.cn/20200129105235873.png"></p>
+<p>遇到这种就运行<code>npm audit fix</code>，如果还不成功，会提示你用<code>npm audit fix --force</code>，一般这个时候就成功了。<br>成功了之后可以看到当前目录的<code>node_modules/</code>下有个<code>live2d-widget</code>目录，这是动画的主配置：</p>
+<p><img src="https://img-blog.csdnimg.cn/2020012910571945.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2MjM5NTY5,size_16,color_FFFFFF,t_70"></p>
+<p>这个时候是没有模型文件的，所以下一步是下载模型文件</p>
+<br>
+
+<h3 id="2-下载model文件"><a href="#2-下载model文件" class="headerlink" title="2.下载model文件"></a>2.下载model文件</h3><br>
+
+<p>下载模型文件：<br>模型文件可直接用npm安装：如下<br>npm install live2d-widget-model-shizuku</p>
+<p><br>安装完成可以在node_modules/下看到live2d-widget-model-shizuku文件夹</p>
+<p><img src="https://img-blog.csdnimg.cn/20200129110058553.png"></p>
+<h3 id="3-添加live2d看板娘到hexo"><a href="#3-添加live2d看板娘到hexo" class="headerlink" title="3.添加live2d看板娘到hexo"></a>3.添加live2d看板娘到hexo</h3><p>配置Hexo的主<code>_config.yml</code></p>
+<p>添加以下代码到配置文件中：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">## Live2D看板娘</span><br><span class="line">live2d:</span><br><span class="line">  enable: true</span><br><span class="line">  pluginModelPath: assets&#x2F;</span><br><span class="line">  model:</span><br><span class="line">    #模板目录，在node_modules里</span><br><span class="line">    use: live2d-widget-model-shizuku  </span><br><span class="line">  display:</span><br><span class="line">    position: right</span><br><span class="line">    width: 300 </span><br><span class="line">    height: 600</span><br><span class="line">  mobile:</span><br><span class="line">    # 在手机端显示</span><br><span class="line">    show: false   </span><br><span class="line">  rect:</span><br><span class="line">    opacity:0.7</span><br></pre></td></tr></table></figure>
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">FanYijie</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2019/05/20/hexo%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/">http://example.com/2019/05/20/hexo%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">FanYijie</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/hexo/">hexo</a><a class="post-meta__tags" href="/tags/git/">git</a></div><div class="post_share"><div class="social-share" data-image="https://w.wallhaven.cc/full/q6/wallhaven-q6jvjl.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2019/06/08/js%E4%B8%89%E5%A4%A7%E5%AE%B6%E6%97%8F/"><img class="prev-cover" src="https://desk-fd.zol-img.com.cn/t_s144x90c5/g5/M00/0D/0D/ChMkJl3eNAqICqRbAATlHsoXhDcAAvcywDnRrMABOU2229.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">js三大家族</div></div></a></div><div class="next-post pull-right"><a href="/2019/05/19/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGit%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"><img class="next-cover" src="https://w.wallhaven.cc/full/9m/wallhaven-9mxz8k.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">使用Hexo和Git搭建个人博客</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2020/02/20/npm和yarn/" title="npm和yarn"><img class="cover" src="https://w.wallhaven.cc/full/72/wallhaven-7232p9.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-02-20</div><div class="title">npm和yarn</div></div></a></div><div><a href="/2019/05/19/使用Hexo和Git搭建个人博客/" title="使用Hexo和Git搭建个人博客"><img class="cover" src="https://w.wallhaven.cc/full/9m/wallhaven-9mxz8k.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-05-19</div><div class="title">使用Hexo和Git搭建个人博客</div></div></a></div></div></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/txone.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">FanYijie</div><div class="author-info__description">少壮不努力，老大徒伤悲</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">26</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/fanyijie-21?tab=repositories"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:943804182@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">一.更换主题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%88%9B%E5%BB%BAnext%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-number">1.1.</span> <span class="toc-text">1.创建next文件夹</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%B8%8B%E8%BD%BD%E4%B8%BB%E9%A2%98"><span class="toc-number">1.2.</span> <span class="toc-text">2.下载主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%BF%AE%E6%94%B9%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%EF%BC%8C%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE"><span class="toc-number">1.3.</span> <span class="toc-text">3.修改博客配置文件，更换主题配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-Live2D%E7%9C%8B%E6%9D%BF%E5%A8%98"><span class="toc-number">2.</span> <span class="toc-text">二.Live2D看板娘</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96"><span class="toc-number">2.1.</span> <span class="toc-text">1.安装依赖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%B8%8B%E8%BD%BDmodel%E6%96%87%E4%BB%B6"><span class="toc-number">2.2.</span> <span class="toc-text">2.下载model文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%B7%BB%E5%8A%A0live2d%E7%9C%8B%E6%9D%BF%E5%A8%98%E5%88%B0hexo"><span class="toc-number">2.3.</span> <span class="toc-text">3.添加live2d看板娘到hexo</span></a></li></ol></li></ol></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/03/11/cookie-session/" title="cookie session"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="cookie session"/></a><div class="content"><a class="title" href="/2021/03/11/cookie-session/" title="cookie session">cookie session</a><time datetime="2021-03-11T14:38:25.000Z" title="发表于 2021-03-11 22:38:25">2021-03-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/11/ES6%E8%AF%AD%E6%B3%95/" title="ES6语法"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ES6语法"/></a><div class="content"><a class="title" href="/2021/03/11/ES6%E8%AF%AD%E6%B3%95/" title="ES6语法">ES6语法</a><time datetime="2021-03-11T12:37:42.000Z" title="发表于 2021-03-11 20:37:42">2021-03-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/01/20/%E6%B5%85%E8%B0%88%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96/" title="浅谈前端模块化"><img src="https://desk-fd.zol-img.com.cn/t_s144x90c5/g5/M00/0A/05/ChMkJ1Zfr2GIPcUDAA4sge6qvA4AAFolQPYSd8ADiyZ655.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="浅谈前端模块化"/></a><div class="content"><a class="title" href="/2021/01/20/%E6%B5%85%E8%B0%88%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96/" title="浅谈前端模块化">浅谈前端模块化</a><time datetime="2021-01-20T05:28:39.000Z" title="发表于 2021-01-20 13:28:39">2021-01-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/12/18/%E6%B5%85%E8%B0%88TypeScript/" title="浅谈TypeScript"><img src="https://desk-fd.zol-img.com.cn/t_s144x90c5/g5/M00/02/08/ChMkJ1bKzP-IAtwGAAP44uPCN1MAALI8AFJVp8AA_j6243.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="浅谈TypeScript"/></a><div class="content"><a class="title" href="/2020/12/18/%E6%B5%85%E8%B0%88TypeScript/" title="浅谈TypeScript">浅谈TypeScript</a><time datetime="2020-12-18T03:36:45.000Z" title="发表于 2020-12-18 11:36:45">2020-12-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/20/MySql/" title="MySql"><img src="https://desk-fd.zol-img.com.cn/t_s144x90c5/g5/M00/02/00/ChMkJlbKw6aIIwgEAApC8adR_Q4AALG6QOUpfcACkMJ408.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MySql"/></a><div class="content"><a class="title" href="/2020/11/20/MySql/" title="MySql">MySql</a><time datetime="2020-11-20T12:58:14.000Z" title="发表于 2020-11-20 20:58:14">2020-11-20</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By FanYijie</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div></body></html>
